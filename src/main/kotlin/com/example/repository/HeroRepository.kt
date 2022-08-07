@@ -17,4 +17,7 @@ interface HeroRepository {
 
     suspend fun searchHeroes(name: String?): ApiResponse
 
+    fun calculatePage(page: Int): Map<String, Int?>
+
+
 }

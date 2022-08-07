@@ -459,7 +459,7 @@ class HeroRepositoryImpl : HeroRepository {
         )
     }
 
-    private fun calculatePage(page: Int): Map<String, Int?> {
+     override fun calculatePage(page: Int): Map<String, Int?> {
         var prevPage: Int? = page
         var nextPage: Int? = page
 

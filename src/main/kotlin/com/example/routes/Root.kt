@@ -5,10 +5,10 @@ import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
-fun Route.root(){
-    get("/"){
-        call.respond(
-            message = "Welcome to Bruto API!",
+fun Route.root() {
+    get("/") {
+        call.respondText(
+            text = "Welcome to Boruto API!",
             status = HttpStatusCode.OK
         )
     }
