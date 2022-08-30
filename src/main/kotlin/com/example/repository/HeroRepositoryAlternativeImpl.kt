@@ -460,7 +460,7 @@ class HeroRepositoryAlternativeImpl : HeroRepositoryAlternative {
         )
         require(page < allHeroes.size)
         val prevPage = if (page == 1) null else page - 1
-        val nextPAge = if (page == allHeroes.size) null else page + 1
+        val nextPAge = if (page >= allHeroes.size) null else page + 1
         return mapOf(
             "prevPage" to prevPage,
             "nextPage" to nextPAge
@@ -472,10 +472,6 @@ class HeroRepositoryAlternativeImpl : HeroRepositoryAlternative {
         page: Int,
         limit: Int
     ): List<Hero> {
-
-        if (limit >= heroes.size) {
-          return heroes
-        }
 
         val allHeroes = heroes.windowed(
             size = limit,

@@ -15,8 +15,8 @@ fun Application.configureRouting() {
             resources("images")
         }
         root()
-        //getAllHeroes()
-        getAllHeroesAlternative()
+        getAllHeroes()
+        //getAllHeroesAlternative()
         searchHeroes()
 
     }
